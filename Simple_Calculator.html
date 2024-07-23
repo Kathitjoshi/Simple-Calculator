@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Simple Calculator</title>
+</head>
+<body>
+         <input type="number" name="" id="first" step="any"/>
+         <select id="op">
+         	<option value="+">+</option>
+         	<option value="-">-</option>
+         	<option value="*">*</option>
+         	<option value="/">/</option>
+         	<option value="%">%</option>
+         	<option value="^">^</option>
+         </select>
+         <input type="number" name="" id="second" step="any"/>	
+         <br/>
+         <br/>
+         <button onclick="cal()">Calculate</button>
+         <input type="text" name="" readonly="" id="res"/>
+</body>
+<script>
+	function cal(){
+	      var a=document.getElementById('first').value;
+	      var b=document.getElementById('second').value;
+	      var opr=document.getElementById('op').value;
+          if(opr=="+")
+          {
+          	 var res=parseInt(a)+parseInt(b);
+          }
+          if(opr=="-")
+          {
+          	 var res=parseInt(a)-parseInt(b);
+          }
+          if(opr=="*")
+          {
+          	 var res=parseInt(a)*parseInt(b);
+          }
+          if(opr=="/")
+          {
+          	 var res=parseInt(a)/parseInt(b);
+          }
+          if(opr=="%")
+          {
+          	 var res=parseInt(a)%parseInt(b);
+          }
+          if(opr=="^")
+          {
+          	 var res=parseInt(a)**parseInt(b);
+          }
+          document.getElementById("res").value=res;
+       }
+ </script>   
+
+</html>
